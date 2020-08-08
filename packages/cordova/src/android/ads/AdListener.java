@@ -15,7 +15,8 @@ public class AdListener extends com.google.android.gms.ads.AdListener {
     }
 
     @Override
-    public void onAdFailedToLoad(int errorCode) {
+    public void onAdFailedToLoad(LoadAdError adError) {
+        int errorCode = adError.getCode();
         AdBase.plugin.emit(ad.getFailedToLoadEvent(), ad.buildErrorPayload(errorCode));
     }
 
