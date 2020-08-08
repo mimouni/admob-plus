@@ -37,7 +37,7 @@ public class AdMob extends CordovaPlugin {
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
 
-        MobileAds.initialize(cordova.getActivity(), getApplicationID());
+        MobileAds.initialize(cordova.getActivity());
         AdBase.initialize(this);
     }
 
